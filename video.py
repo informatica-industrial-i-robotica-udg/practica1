@@ -4,7 +4,7 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 while(True):
-    #capture frame-by-frame
+    #capture frame-by-frame, cap.read() és la comanda per començar a capturar imatges
     ret, frame = cap.read()
 
     #Our operations on the frame com here
@@ -17,3 +17,5 @@ while(True):
 #When everything done, release the VideoCapture
 cap.release()
 cv2.destroyAllWindows()
+# a vegades cap dona error i no pots obrir la captura, per mirar si va bé pots fer
+#un cap.isOpened()
