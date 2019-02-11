@@ -3,11 +3,12 @@ import cv2
 #capturar video amb la webcam
 #cap = cv2.VideoCapture(0)
 #capturar video des d'arxiu
-cap = cv2.VideoCapture('video-original.avi')
+cap = cv2.VideoCapture(0)
 
-#definim l'objecte que volem guardar
+#definim l'objecte que volem guardar, AMB EL FORMAT DE VIDEO QUE VOLEM
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc,20.0,(640,480))
+#CREEM L'OBJECTE QUE VOLEM GUARDAR, EN AQUEST CAS ÉS EL VÍDEO OUTPUT.AVI
+out = cv2.VideoWriter('output.avi',fourcc,24,(640,480))
 
 while(cap.isOpened()):
     #capture frame-by-frame, cap.read() és la comanda per començar a capturar imatges
@@ -27,7 +28,3 @@ while(cap.isOpened()):
 cap.release()
 out.release()
 cv2.destroyAllWindows()
-# a vegades cap dona error i no pots obrir la captura, per mirar si va bé pots fer
-#un cap.isOpened()
-#amb un cap.get(num) | num € 0 -18, et dona propietats del video
-# amb cap.set(num,valor) assignes un valor a una propietat del video
