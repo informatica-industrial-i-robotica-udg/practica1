@@ -26,4 +26,5 @@ for i,l in enumerate(range(0,cols)):
     plt.figure(i)
     # Crea la gràfica referent a v1
     plt.plot(v1)
+    # Mostra el gràfic
     plt.show()
