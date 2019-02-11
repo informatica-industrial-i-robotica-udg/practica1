@@ -1,7 +1,9 @@
 import numpy as np
 import cv2
-
-cap = cv2.VideoCapture(0)
+#capturar video amb la webcam
+#cap = cv2.VideoCapture(0)
+#capturar video des d'arxiu
+cap = cv2.VideoCapture('video-original.avi')
 
 while(True):
     #capture frame-by-frame, cap.read() és la comanda per començar a capturar imatges
@@ -14,6 +16,10 @@ while(True):
     cv2.imshow('frame',gray)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+
+
+
 #When everything done, release the VideoCapture
 cap.release()
 cv2.destroyAllWindows()
