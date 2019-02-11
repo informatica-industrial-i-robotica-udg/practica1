@@ -9,7 +9,7 @@ cap = cv2.VideoCapture(0)
 # definim l'objecte que volem guardar, AMB EL FORMAT DE VIDEO QUE VOLEM
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # CREEM L'OBJECTE QUE VOLEM GUARDAR, EN AQUEST CAS ÉS EL VÍDEO OUTPUT.AVI
-out = cv2.VideoWriter('output.avi',fourcc,24,(640,480))
+out = cv2.VideoWriter('videos/output.avi',fourcc,24,(640,480))
 
 while(cap.isOpened()):
     # capture frame-by-frame, cap.read() es la comanda per començar a capturar imatges
