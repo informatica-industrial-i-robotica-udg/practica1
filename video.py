@@ -19,3 +19,5 @@ cap.release()
 cv2.destroyAllWindows()
 # a vegades cap dona error i no pots obrir la captura, per mirar si va bé pots fer
 #un cap.isOpened()
+#amb un cap.get(num) | num € 0 -18, et dona propietats del video
+# amb cap.set(num,valor) assignes un valor a una propietat del video
