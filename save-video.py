@@ -6,8 +6,8 @@ import cv2
 cap = cv2.VideoCapture('video-original.avi')
 
 #definim l'objecte que volem guardar
-fourcc = cv2.VideoWritter_fourcc(*'XVID')
-out = cv2.VideoWritter('output.avi',fourcc,20.0,(640,480))
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi',fourcc,20.0,(640,480))
 
 while(cap.isOpened()):
     #capture frame-by-frame, cap.read() és la comanda per començar a capturar imatges
